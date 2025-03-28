@@ -12,4 +12,10 @@ public void move(int source, int destination) {
             int disk = sourceTower.pop();
             destinationTower.push(disk);
             System.out.println("Moved disk " + disk + " from tower " + source + " to tower " + destination);
-        
+        } else {
+            System.out.println("Invalid move: Cannot place disk " + sourceDisk + " on disk " + destinationDisk);
+        }
+    } else {
+        System.out.println("Invalid move: Source tower is empty.");
+    }
+}
