@@ -32,4 +32,16 @@ public class TowerModel {
         int sourceDisk = sourceTower.peek();
         int destinationDisk = destinationTower.peek();
         
-        
+        if (sourceDisk != 0) {
+            if (destinationDisk == 0 || sourceDisk < destinationDisk) {
+                int disk = sourceTower.pop();
+                destinationTower.push(disk);
+                System.out.println("Moved disk " + disk + " from tower " + source + " to tower " + destination);
+            } else {
+                System.out.println("Invalid move: Cannot place disk " + sourceDisk + " on disk " + destinationDisk);
+            }
+        } else {
+            System.out.println("Invalid move: Source tower is empty.");
+        }
+    }
+}
