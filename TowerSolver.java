@@ -4,7 +4,9 @@ public class TowerSolver {
     public TowerSolver() {
     }
 
-    
+    public void solve(TowerModel model) {
+        this.model = model;
+        solveRecursive(model.getHeight(), 0, 2, 1);
     }
 
     private void solveRecursive(int n, int source, int destination, int auxiliary) {
